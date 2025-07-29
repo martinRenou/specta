@@ -45,7 +45,9 @@ export class NotebookGridWidgetFactory extends ABCWidgetFactory<
       });
       const isSpecta = isSpectaApp();
 
+      // TODO Remove this
       if (!spectaConfig.hideTopbar) {
+        console.log('topbar element coming from the notebook factory');
         const topbar = ReactWidget.create(
           <TopbarElement
             config={spectaConfig.topBar}
